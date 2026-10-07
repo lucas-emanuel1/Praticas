@@ -1,0 +1,60 @@
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.info {
+  display: grid;
+  place-items: start;
+  place-self: start;
+  align-self: center;
+  gap: 20px;
+}
+
+.titulo {
+  grid-column: 1 / -1;
+}
+
+/* Estilos Gerais */
+body {
+  font-family: Arial;
+  margin: 40px;
+}
+
+.titulo, .descricao {
+  margin: 0;
+}
+
+.titulo {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.descricao, .preco {
+  font-size: 20px;
+}
+
+.preco {
+  background-color: #ddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.foto {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.descricao {
+
+}
+
+.comprar {
+  background-color: #a8f;
+  color: #103;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 20px;
+}

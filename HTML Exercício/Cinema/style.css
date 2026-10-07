@@ -1,0 +1,12 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.c-green { 
+  color: green;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.c-brown {
+  color: brown
+}
