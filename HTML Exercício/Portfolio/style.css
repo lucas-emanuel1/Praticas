@@ -192,3 +192,62 @@ section {
   } 
 
 }
+
+@media (max-width: 1250px) {
+  header, main, #experiencia, #formacao {
+    margin-inline: 2rem;
+  }
+  main {
+    padding-block: 40px 60px;
+    
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  #experiencia, #formacao {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    .expTitle {
+      justify-self: center;
+      max-width: 100%;
+      font-size: 6rem;
+    }
+    .expTxt {
+      font-size: 1.2rem;
+      max-width: 75ch;
+      align-self: center;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    justify-self: center;
+    gap: 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+    
+    h1:before {
+      display: none;
+    }
+  }
+
+  .expTitle {
+    font-size: 2.4rem !important;
+  }
+
+  .expTxt {
+    text-align: center;
+  }
+}
