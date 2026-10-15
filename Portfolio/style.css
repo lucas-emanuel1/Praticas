@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans";
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-block: 2.5rem;
+
+  img {
+    width: 4rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 2.5rem;
+    }
+
+    a:hover {
+      opacity: 80%;
+      border-bottom: 2px solid #701CDA;
+    }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-block: 80px 120px;
+
+  h1 {
+    position: relative;
+    font-size: 6rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      display: inline-block;
+      background: url(img/detalhe.svg);
+      width: 128px;
+      height: 128px;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .introImg img {
+    object-fit: cover;
+    width: 400px;
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+
+  .expTitle {
+    font-size: 8rem;
+    color: #E0E0E0;
+    line-height: 1;
+    word-break: break-all;
+    max-width: 4ch;
+  }
+  .expTitle2 {
+    max-width: 5ch;
+  }
+
+  .expTxt {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #525252;
+
+    strong {
+      color: #141414;
+    }
+  }
+
+  .exp2 {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+  }
+
+  .expItem {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px 42px;
+    background-color: #F5F5F5;
+    border-radius: .5rem;
+    padding: 20px;
+
+    h3 {
+      position: relative;
+    }
+
+    h3:first-child::before {
+      content: "";
+      position: relative;
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background-image: linear-gradient(#B6F829, #67DD0A);
+      left: -20px;
+    }
+
+    p {
+      color: #525252;
+      max-width: 45ch;
+      line-height: 1.4;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+      
+      li {
+        flex: 1;
+        text-align: center;
+        align-content: center;
+        padding: 5px 10px;
+        background-color: #FFF;
+        text-transform: uppercase;
+        border-radius: .5rem;
+        font-size: .8rem;
+      }
+    }
+  }
+}
+.bgBlack {
+  background: #141414;
+
+  section {
+
+    .expTxt {
+      color: #A3A3A3;
+    }
+
+    strong {
+      color: #FFF;
+    }
+
+    .expItemGroup {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.625rem;
+    }
+
+    .expItem {
+      display: grid;
+      grid-template-columns: 1fr;
+      background-color: #090909;
+
+      h3:first-child {
+        color: #A3A3A3;
+      }
+      .expTitleLevel3 {
+        color: #FFF;
+        max-width: 24ch;
+      }
+      h3:last-child {
+        grid-row: 8;
+        color: #A3A3A3;
+        font-size: .8rem;
+      }
+    }
+  } 
+
+}
+
+@media (max-width: 1250px) {
+  header, main, #experiencia, #formacao {
+    margin-inline: 2rem;
+  }
+  main {
+    padding-block: 40px 60px;
+    
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  #experiencia, #formacao {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    .expTitle {
+      justify-self: center;
+      max-width: 100%;
+      font-size: 6rem;
+    }
+    .expTxt {
+      font-size: 1.2rem;
+      max-width: 75ch;
+      align-self: center;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    justify-self: center;
+    gap: 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+    
+    h1:before {
+      display: none;
+    }
+  }
+
+  .expTitle {
+    font-size: 2.4rem !important;
+  }
+
+  .expTxt {
+    text-align: center;
+  }
+}
